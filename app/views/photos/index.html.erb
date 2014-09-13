@@ -1,0 +1,17 @@
+<h1> FE MALE Photos </h1>
+
+
+<% if @photos.empty? %>
+  <p> There are no photos! </p>
+<% else %>
+  <% @photos.each do |photo| %>
+<p>
+  <%= photo.description %>
+  <img src='<%= photo.photo_url %>' width=200 height=200> </img>
+<%= link_to 'edit info', edit_photo_path(photo) %>
+<%= link_to 'delete', photo_path(photo), method: :delete, data: { confirm: "Na pewno?" } %>
+
+</p>
+
+  <% end %>
+<% end %>

@@ -1,0 +1,38 @@
+<h1>Rails girls start</h1>
+<h2>Hi</h2>
+<p>Hello</p>
+<b>my name is</b>
+<i>Anita</i>
+
+
+<ul>
+<li>item 1</li>
+<li>item 2</li>
+<li>item 3</li>
+</ul>
+
+<ol>
+<li>item 1</li>
+<li>item 2</li>
+<li>item 3</li>
+</ol>
+
+
+<a href='http://www.facebook.pl' target=blank> to jest link</a>
+
+<br>
+<%= Time.now %>
+<br>
+
+<% ['kot','pies','lemur','niedzwiedz'].each do |element| %>
+<br> <%= element %>
+<% end %>
+
+<% @linki.each do |name, link| %>
+<br> <a href='<%= link %>' target='_blank'> <%= name %></a> 
+<% end %>
+
+<br>
+<%= @from_controller %>
+
+
